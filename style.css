@@ -18,6 +18,7 @@
     --color-accent-soft: rgba(196, 162, 110, 0.15);
     --font-serif: 'Cormorant Garamond', 'Georgia', serif;
     --font-sans: 'Inter', -apple-system, sans-serif;
+    --font-cn: 'Noto Serif SC', 'PingFang SC', 'Microsoft YaHei', serif;
     --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -113,6 +114,87 @@ a {
 
 .nav__links a:hover::after {
     width: 100%;
+}
+
+/* Language Toggle */
+.lang-toggle {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 2px;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: var(--font-sans);
+    transition: border-color 0.3s ease;
+}
+
+.lang-toggle:hover {
+    border-color: var(--color-accent);
+}
+
+.nav--scrolled .lang-toggle {
+    border-color: rgba(26, 26, 24, 0.25);
+}
+
+.lang-toggle__option {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav--scrolled .lang-toggle__option {
+    color: rgba(26, 26, 24, 0.35);
+}
+
+.lang-toggle__option--active {
+    color: #fff;
+}
+
+.nav--scrolled .lang-toggle__option--active {
+    color: var(--color-text);
+}
+
+.lang-toggle__divider {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.nav--scrolled .lang-toggle__divider {
+    color: rgba(26, 26, 24, 0.2);
+}
+
+.lang-toggle--mobile {
+    display: none;
+}
+
+.nav__right-mobile {
+    display: none;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Chinese font override */
+[data-lang="cn"] .hero__subtitle,
+[data-lang="cn"] .about__lead,
+[data-lang="cn"] .about__text p,
+[data-lang="cn"] .partnership__intro,
+[data-lang="cn"] .partnership__card p,
+[data-lang="cn"] .featured__desc,
+[data-lang="cn"] .contact__text {
+    font-family: var(--font-cn);
+}
+
+[data-lang="cn"] .section__title,
+[data-lang="cn"] .featured__title,
+[data-lang="cn"] .partnership__card h4,
+[data-lang="cn"] .gallery__overlay h4 {
+    font-family: var(--font-cn);
+    font-weight: 400;
 }
 
 .nav__toggle {
@@ -757,6 +839,14 @@ a {
 
     .nav__links {
         display: none;
+    }
+
+    .nav__right-mobile {
+        display: flex;
+    }
+
+    .nav__right-mobile .lang-toggle--mobile {
+        display: flex;
     }
 
     .nav__toggle {

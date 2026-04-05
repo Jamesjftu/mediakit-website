@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Villanelle &mdash; Media Kit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,34 +15,46 @@
     <nav class="nav" id="nav">
         <a href="#" class="nav__logo">Villanelle</a>
         <div class="nav__links">
-            <a href="#work">Work</a>
-            <a href="#about">About</a>
-            <a href="#partnership">Partnership</a>
-            <a href="#contact">Contact</a>
+            <a href="#work" data-en="Work" data-cn="作品">Work</a>
+            <a href="#about" data-en="About" data-cn="关于">About</a>
+            <a href="#partnership" data-en="Partnership" data-cn="合作">Partnership</a>
+            <a href="#contact" data-en="Contact" data-cn="联系">Contact</a>
+            <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+                <span class="lang-toggle__option lang-toggle__option--active" data-value="en">EN</span>
+                <span class="lang-toggle__divider">/</span>
+                <span class="lang-toggle__option" data-value="cn">CN</span>
+            </button>
         </div>
-        <button class="nav__toggle" id="navToggle" aria-label="Menu">
-            <span></span><span></span>
-        </button>
+        <div class="nav__right-mobile">
+            <button class="lang-toggle lang-toggle--mobile" id="langToggleMobile" aria-label="Switch language">
+                <span class="lang-toggle__option lang-toggle__option--active" data-value="en">EN</span>
+                <span class="lang-toggle__divider">/</span>
+                <span class="lang-toggle__option" data-value="cn">CN</span>
+            </button>
+            <button class="nav__toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span>
+            </button>
+        </div>
     </nav>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#partnership">Partnership</a>
-        <a href="#contact">Contact</a>
+        <a href="#work" data-en="Work" data-cn="作品">Work</a>
+        <a href="#about" data-en="About" data-cn="关于">About</a>
+        <a href="#partnership" data-en="Partnership" data-cn="合作">Partnership</a>
+        <a href="#contact" data-en="Contact" data-cn="联系">Contact</a>
     </div>
 
     <!-- Hero -->
     <header class="hero">
         <div class="hero__content">
-            <p class="hero__overline">Artist &middot; Illustrator &middot; Visual Storyteller</p>
+            <p class="hero__overline" data-en="Artist &middot; Illustrator &middot; Visual Storyteller" data-cn="艺术家 &middot; 插画师 &middot; 视觉叙事者">Artist &middot; Illustrator &middot; Visual Storyteller</p>
             <h1 class="hero__title">Villanelle</h1>
-            <p class="hero__subtitle">Somewhere between the precise and the wild,<br>between observation and imagination.</p>
-            <a href="#work" class="hero__cta">View Selected Works</a>
+            <p class="hero__subtitle" data-en="Somewhere between the precise and the wild,&lt;br&gt;between observation and imagination." data-cn="在精确与狂野之间，&lt;br&gt;在观察与想象之间。">Somewhere between the precise and the wild,<br>between observation and imagination.</p>
+            <a href="#work" class="hero__cta" data-en="View Selected Works" data-cn="查看精选作品">View Selected Works</a>
         </div>
         <div class="hero__scroll">
-            <span>Scroll</span>
+            <span data-en="Scroll" data-cn="下滑">Scroll</span>
             <div class="hero__scroll-line"></div>
         </div>
     </header>
@@ -51,7 +63,7 @@
     <section class="section" id="work">
         <div class="section__header">
             <span class="section__label">01</span>
-            <h2 class="section__title">Selected Works</h2>
+            <h2 class="section__title" data-en="Selected Works" data-cn="精选作品">Selected Works</h2>
         </div>
 
         <!-- Featured Piece -->
@@ -60,10 +72,10 @@
                 <img src="images/23022.jpg" alt="Black cat beneath a winter tree - oil on canvas" loading="lazy">
             </div>
             <div class="featured__info">
-                <span class="featured__tag">Featured</span>
-                <h3 class="featured__title">Beneath the Emerald Tree</h3>
-                <p class="featured__medium">Oil on canvas</p>
-                <p class="featured__desc">A black cat rests in quiet contemplation beneath bare branches, enveloped in washes of deep emerald and teal. The thick, gestural brushwork dissolves the boundary between figure and atmosphere.</p>
+                <span class="featured__tag" data-en="Featured" data-cn="精选">Featured</span>
+                <h3 class="featured__title" data-en="Beneath the Emerald Tree" data-cn="翡翠树下">Beneath the Emerald Tree</h3>
+                <p class="featured__medium" data-en="Oil on canvas" data-cn="布面油画">Oil on canvas</p>
+                <p class="featured__desc" data-en="A black cat rests in quiet contemplation beneath bare branches, enveloped in washes of deep emerald and teal. The thick, gestural brushwork dissolves the boundary between figure and atmosphere." data-cn="一只黑猫在光秃的枝桠下静静沉思，被深翡翠色与青色的色彩浸染。厚重的笔触消融了形体与氛围之间的界限。">A black cat rests in quiet contemplation beneath bare branches, enveloped in washes of deep emerald and teal. The thick, gestural brushwork dissolves the boundary between figure and atmosphere.</p>
             </div>
         </div>
 
@@ -72,57 +84,57 @@
             <div class="gallery__item gallery__item--tall">
                 <img src="images/23026.jpg" alt="Cat silhouette gazing at cityscape - watercolor" loading="lazy">
                 <div class="gallery__overlay">
-                    <h4>Window Watcher</h4>
-                    <p>Watercolor on paper, 2015</p>
+                    <h4 data-en="Window Watcher" data-cn="窗前守望者">Window Watcher</h4>
+                    <p data-en="Watercolor on paper, 2015" data-cn="纸上水彩，2015">Watercolor on paper, 2015</p>
                 </div>
             </div>
             <div class="gallery__item">
                 <img src="images/23021.jpg" alt="Potted plant and cat with sunglasses - acrylic on board" loading="lazy">
                 <div class="gallery__overlay">
-                    <h4>Still Life with Attitude</h4>
-                    <p>Acrylic on board (diptych)</p>
+                    <h4 data-en="Still Life with Attitude" data-cn="有态度的静物">Still Life with Attitude</h4>
+                    <p data-en="Acrylic on board (diptych)" data-cn="木板丙烯（双联画）">Acrylic on board (diptych)</p>
                 </div>
             </div>
             <div class="gallery__item">
                 <img src="images/23025.jpg" alt="Abstract watercolor wash in soft pastels" loading="lazy">
                 <div class="gallery__overlay">
-                    <h4>Soft Dissolve</h4>
-                    <p>Watercolor on paper</p>
+                    <h4 data-en="Soft Dissolve" data-cn="柔和消融">Soft Dissolve</h4>
+                    <p data-en="Watercolor on paper" data-cn="纸上水彩">Watercolor on paper</p>
                 </div>
             </div>
             <div class="gallery__item gallery__item--wide">
                 <img src="images/23024.jpg" alt="Looking up through a green tree canopy - watercolor" loading="lazy">
                 <div class="gallery__overlay">
-                    <h4>Canopy</h4>
-                    <p>Watercolor on paper</p>
+                    <h4 data-en="Canopy" data-cn="树冠">Canopy</h4>
+                    <p data-en="Watercolor on paper" data-cn="纸上水彩">Watercolor on paper</p>
                 </div>
             </div>
             <div class="gallery__item">
                 <img src="images/23027.jpg" alt="Yellow cat face surrounded by blue doodle characters" loading="lazy">
                 <div class="gallery__overlay">
-                    <h4>Centre of Attention</h4>
-                    <p>Marker and acrylic on paper</p>
+                    <h4 data-en="Centre of Attention" data-cn="众目焦点">Centre of Attention</h4>
+                    <p data-en="Marker and acrylic on paper" data-cn="纸上马克笔与丙烯">Marker and acrylic on paper</p>
                 </div>
             </div>
             <div class="gallery__item gallery__item--tall">
                 <img src="images/23023.jpg" alt="Still life with bottle, pear, and ivy - pencil and watercolor" loading="lazy">
                 <div class="gallery__overlay">
-                    <h4>Bottle, Pear, Ivy</h4>
-                    <p>Pencil and watercolor</p>
+                    <h4 data-en="Bottle, Pear, Ivy" data-cn="瓶、梨、常春藤">Bottle, Pear, Ivy</h4>
+                    <p data-en="Pencil and watercolor" data-cn="铅笔与水彩">Pencil and watercolor</p>
                 </div>
             </div>
             <div class="gallery__item gallery__item--wide">
                 <img src="images/23029.jpg" alt="Collection of ink line portraits and a cat" loading="lazy">
                 <div class="gallery__overlay">
-                    <h4>Continuous Line Portraits</h4>
-                    <p>Ink on paper (series)</p>
+                    <h4 data-en="Continuous Line Portraits" data-cn="连续线条肖像">Continuous Line Portraits</h4>
+                    <p data-en="Ink on paper (series)" data-cn="纸上墨水（系列）">Ink on paper (series)</p>
                 </div>
             </div>
             <div class="gallery__item">
                 <img src="images/23028.jpg" alt="Bold marker portrait of a face" loading="lazy">
                 <div class="gallery__overlay">
-                    <h4>Face Study</h4>
-                    <p>Marker on paper</p>
+                    <h4 data-en="Face Study" data-cn="面部习作">Face Study</h4>
+                    <p data-en="Marker on paper" data-cn="纸上马克笔">Marker on paper</p>
                 </div>
             </div>
         </div>
@@ -132,22 +144,22 @@
     <section class="section section--dark" id="about">
         <div class="section__header">
             <span class="section__label">02</span>
-            <h2 class="section__title">About the Artist</h2>
+            <h2 class="section__title" data-en="About the Artist" data-cn="关于艺术家">About the Artist</h2>
         </div>
         <div class="about">
             <div class="about__text">
-                <p class="about__lead">Villanelle works across painting, watercolor, ink, and illustration&mdash;moving freely between mediums the way a conversation shifts between languages.</p>
-                <p>The work is characterised by an instinct for mood over precision: atmospheric oil paintings sit alongside bold pop illustrations; delicate watercolour washes give way to raw, confident line drawings. Recurring motifs&mdash;cats, trees, the human face&mdash;appear and reappear, each time seen differently.</p>
-                <p>Whether it is the emerald stillness of a cat beneath a bare tree, or a riot of doodled characters crowding around a bright yellow face, every piece carries the same signature quality: an unforced sense of life, observed with warmth and rendered without pretension.</p>
+                <p class="about__lead" data-en="Villanelle works across painting, watercolor, ink, and illustration&mdash;moving freely between mediums the way a conversation shifts between languages." data-cn="Villanelle 的创作横跨油画、水彩、水墨与插画——在不同媒介间自如游走，如同对话在语言间自然切换。">Villanelle works across painting, watercolor, ink, and illustration&mdash;moving freely between mediums the way a conversation shifts between languages.</p>
+                <p data-en="The work is characterised by an instinct for mood over precision: atmospheric oil paintings sit alongside bold pop illustrations; delicate watercolour washes give way to raw, confident line drawings. Recurring motifs&mdash;cats, trees, the human face&mdash;appear and reappear, each time seen differently." data-cn="作品的特质在于对氛围的直觉胜于对精确的追求：富有气韵的油画与大胆的波普插画并置，细腻的水彩晕染与果断的线描交替呈现。反复出现的母题——猫、树、人的面孔——每一次都以不同的面貌重现。">The work is characterised by an instinct for mood over precision: atmospheric oil paintings sit alongside bold pop illustrations; delicate watercolour washes give way to raw, confident line drawings. Recurring motifs&mdash;cats, trees, the human face&mdash;appear and reappear, each time seen differently.</p>
+                <p data-en="Whether it is the emerald stillness of a cat beneath a bare tree, or a riot of doodled characters crowding around a bright yellow face, every piece carries the same signature quality: an unforced sense of life, observed with warmth and rendered without pretension." data-cn="无论是翡翠色静谧中树下的猫，还是一群涂鸦角色簇拥着明黄色面庞的喧闹，每件作品都带有同样的签名式品质：一种不刻意的生命感，以温暖观察，不加矫饰地呈现。">Whether it is the emerald stillness of a cat beneath a bare tree, or a riot of doodled characters crowding around a bright yellow face, every piece carries the same signature quality: an unforced sense of life, observed with warmth and rendered without pretension.</p>
             </div>
             <div class="about__stats">
                 <div class="stat">
                     <span class="stat__number">5+</span>
-                    <span class="stat__label">Mediums</span>
+                    <span class="stat__label" data-en="Mediums" data-cn="媒介">Mediums</span>
                 </div>
                 <div class="stat">
-                    <span class="stat__number">Oil, Watercolor,<br>Ink, Charcoal,<br>Acrylic, Marker</span>
-                    <span class="stat__label">Range</span>
+                    <span class="stat__number" data-en="Oil, Watercolor,&lt;br&gt;Ink, Charcoal,&lt;br&gt;Acrylic, Marker" data-cn="油画、水彩、&lt;br&gt;水墨、炭笔、&lt;br&gt;丙烯、马克笔">Oil, Watercolor,<br>Ink, Charcoal,<br>Acrylic, Marker</span>
+                    <span class="stat__label" data-en="Range" data-cn="创作范围">Range</span>
                 </div>
             </div>
         </div>
@@ -157,26 +169,26 @@
     <section class="section" id="partnership">
         <div class="section__header">
             <span class="section__label">03</span>
-            <h2 class="section__title">Partnership</h2>
+            <h2 class="section__title" data-en="Partnership" data-cn="合作">Partnership</h2>
         </div>
         <div class="partnership">
-            <p class="partnership__intro">Villanelle is open to collaborations with brands, galleries, publications, and cultural organisations that value originality and artistic integrity.</p>
+            <p class="partnership__intro" data-en="Villanelle is open to collaborations with brands, galleries, publications, and cultural organisations that value originality and artistic integrity." data-cn="Villanelle 欢迎与重视原创性和艺术完整性的品牌、画廊、出版机构及文化组织展开合作。">Villanelle is open to collaborations with brands, galleries, publications, and cultural organisations that value originality and artistic integrity.</p>
             <div class="partnership__grid">
                 <div class="partnership__card">
-                    <h4>Brand Collaboration</h4>
-                    <p>Custom artwork, product illustration, packaging design, and visual identity projects that bring a hand-made, one-of-a-kind quality to your brand.</p>
+                    <h4 data-en="Brand Collaboration" data-cn="品牌合作">Brand Collaboration</h4>
+                    <p data-en="Custom artwork, product illustration, packaging design, and visual identity projects that bring a hand-made, one-of-a-kind quality to your brand." data-cn="定制艺术品、产品插画、包装设计及视觉识别项目，为您的品牌注入手工制作的独特品质。">Custom artwork, product illustration, packaging design, and visual identity projects that bring a hand-made, one-of-a-kind quality to your brand.</p>
                 </div>
                 <div class="partnership__card">
-                    <h4>Editorial &amp; Publishing</h4>
-                    <p>Illustration for editorial features, book covers, zines, and print media. Work spans from delicate watercolour to bold graphic illustration.</p>
+                    <h4 data-en="Editorial &amp; Publishing" data-cn="编辑与出版">Editorial &amp; Publishing</h4>
+                    <p data-en="Illustration for editorial features, book covers, zines, and print media. Work spans from delicate watercolour to bold graphic illustration." data-cn="为专题文章、书籍封面、独立出版物及印刷媒体提供插画。创作涵盖从细腻水彩到大胆图形插画的广泛范围。">Illustration for editorial features, book covers, zines, and print media. Work spans from delicate watercolour to bold graphic illustration.</p>
                 </div>
                 <div class="partnership__card">
-                    <h4>Exhibition &amp; Licensing</h4>
-                    <p>Gallery exhibitions, pop-up shows, art licensing for merchandise, and limited-edition print runs. Originals and reproductions available.</p>
+                    <h4 data-en="Exhibition &amp; Licensing" data-cn="展览与授权">Exhibition &amp; Licensing</h4>
+                    <p data-en="Gallery exhibitions, pop-up shows, art licensing for merchandise, and limited-edition print runs. Originals and reproductions available." data-cn="画廊展览、快闪展、艺术授权周边及限量版画。提供原作及复制品。">Gallery exhibitions, pop-up shows, art licensing for merchandise, and limited-edition print runs. Originals and reproductions available.</p>
                 </div>
                 <div class="partnership__card">
-                    <h4>Commissioned Work</h4>
-                    <p>Bespoke portraits, pet portraits, landscape paintings, and custom pieces. Each commission is a conversation between artist and collector.</p>
+                    <h4 data-en="Commissioned Work" data-cn="委托创作">Commissioned Work</h4>
+                    <p data-en="Bespoke portraits, pet portraits, landscape paintings, and custom pieces. Each commission is a conversation between artist and collector." data-cn="定制肖像、宠物肖像、风景画及个性化作品。每一次委托都是艺术家与收藏者之间的对话。">Bespoke portraits, pet portraits, landscape paintings, and custom pieces. Each commission is a conversation between artist and collector.</p>
                 </div>
             </div>
         </div>
@@ -186,21 +198,21 @@
     <section class="section section--dark" id="contact">
         <div class="section__header">
             <span class="section__label">04</span>
-            <h2 class="section__title">Get in Touch</h2>
+            <h2 class="section__title" data-en="Get in Touch" data-cn="联系我们">Get in Touch</h2>
         </div>
         <div class="contact">
-            <p class="contact__text">For partnership enquiries, commissions, or to discuss a collaboration, please reach out.</p>
+            <p class="contact__text" data-en="For partnership enquiries, commissions, or to discuss a collaboration, please reach out." data-cn="如有合作咨询、委托创作或洽谈合作意向，欢迎与我们联系。">For partnership enquiries, commissions, or to discuss a collaboration, please reach out.</p>
             <a href="mailto:hello@villanelle.art" class="contact__email">hello@villanelle.art</a>
             <div class="contact__links">
                 <a href="#">Instagram</a>
-                <a href="#">Portfolio</a>
+                <a href="#" data-en="Portfolio" data-cn="作品集">Portfolio</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <span>&copy; 2026 Villanelle. All rights reserved.</span>
+        <span data-en="&copy; 2026 Villanelle. All rights reserved." data-cn="&copy; 2026 Villanelle. 版权所有。">&copy; 2026 Villanelle. All rights reserved.</span>
     </footer>
 
     <!-- Lightbox -->

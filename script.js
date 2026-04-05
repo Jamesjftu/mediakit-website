@@ -4,6 +4,32 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Language switching ---
+    let currentLang = 'en';
+
+    function setLang(lang) {
+        currentLang = lang;
+        document.documentElement.setAttribute('data-lang', lang);
+
+        document.querySelectorAll('[data-en][data-cn]').forEach(el => {
+            const text = el.getAttribute(`data-${lang}`);
+            if (text) el.innerHTML = text;
+        });
+
+        // Update all toggle buttons
+        document.querySelectorAll('.lang-toggle').forEach(toggle => {
+            toggle.querySelectorAll('.lang-toggle__option').forEach(opt => {
+                opt.classList.toggle('lang-toggle__option--active', opt.dataset.value === lang);
+            });
+        });
+    }
+
+    document.querySelectorAll('.lang-toggle').forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            setLang(currentLang === 'en' ? 'cn' : 'en');
+        });
+    });
+
     // --- Navigation scroll effect ---
     const nav = document.getElementById('nav');
     let lastScroll = 0;
@@ -73,8 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', () => {
             const img = item.querySelector('img');
             const overlay = item.querySelector('.gallery__overlay');
-            const title = overlay ? overlay.querySelector('h4')?.textContent : '';
-            const medium = overlay ? overlay.querySelector('p')?.textContent : '';
+            const titleEl = overlay ? overlay.querySelector('h4') : null;
+            const mediumEl = overlay ? overlay.querySelector('p') : null;
+            const title = titleEl ? titleEl.textContent : '';
+            const medium = mediumEl ? mediumEl.textContent : '';
 
             lightboxImg.src = img.src;
             lightboxImg.alt = img.alt;
@@ -90,9 +118,11 @@ document.addEventListener('DOMContentLoaded', () => {
         featuredImg.style.cursor = 'pointer';
         featuredImg.addEventListener('click', () => {
             const img = featuredImg.querySelector('img');
+            const titleEl = document.querySelector('.featured__title');
+            const mediumEl = document.querySelector('.featured__medium');
             lightboxImg.src = img.src;
             lightboxImg.alt = img.alt;
-            lightboxCaption.textContent = 'Beneath the Emerald Tree — Oil on canvas';
+            lightboxCaption.textContent = `${titleEl.textContent} — ${mediumEl.textContent}`;
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
